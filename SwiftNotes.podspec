@@ -7,6 +7,6 @@ Pod::Spec.new do |s|
   s.license      = { :text => "Copyright 2017 Matt Greenfield. All rights reserved.", 
                      :type => "MIT" }
   s.source       = { :git => 'https://github.com/sobri909/SwiftNotes.git', :tag => '1.0.0' }
-  s.source_files = 'SwiftNotes/*'
+  s.source_files = 'SwiftNotes/*.swift'
   s.ios.deployment_target = '10.0'
 end
