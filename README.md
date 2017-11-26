@@ -39,14 +39,14 @@ extension NSNotification.Name {
 }
 ```
 
-#### Trigger A Custom Notification
+#### Trigger Your Custom Notification
 
 ```swift
 // send your custom event
 trigger(.somethingHappened)
 ```
 
-#### Respond To A Custom Notification
+#### Respond To Your Custom Notification
 
 ```swift
 when(.somethingHappened) { _ in
@@ -56,7 +56,7 @@ when(.somethingHappened) { _ in
 
 ## Extra Parameters
 
-#### Include UserInfo
+#### Trigger An Event And Include UserInfo
 
 ```swift
 trigger(.somethingHappened, userInfo: ["goodTimes": true])
