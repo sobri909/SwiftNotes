@@ -39,6 +39,13 @@ extension NSNotification.Name {
 }
 ```
 
+#### Trigger A Custom Notification
+
+```swift
+// send your custom event
+trigger(.somethingHappened)
+```
+
 #### Respond To A Custom Notification
 
 ```swift
@@ -49,23 +56,21 @@ when(.somethingHappened) { _ in
 
 ## Extra Parameters
 
-#### Trigger A Custom Notification
+#### Include UserInfo
 
 ```swift
-// send your custom event
-trigger(.somethingHappened)
-
-// send your custom event with extra info
 trigger(.somethingHappened, userInfo: ["goodTimes": true])
 ```
 
-#### Observe Specific Senders 
+#### Trigger An Event On A Specific Sender
 
 ```swift
-// trigger an event on a specific sender
 trigger(.updatedFromRemote, on: self)
+````
 
-// observe the event on a specific sender
+#### Observe An Event On A Specific Sender
+
+```swift
 when(model, does: .updatedFromRemote) { _ in
     // do stuff
 }
