@@ -36,11 +36,39 @@ extension NSNotification.Name {
     static let somethingHappened = Notification.Name("somethingHappened")
 }
 
-// send the event
-NotificationCenter.default.post(Notification(name: .somethingHappened))
-
 // respond to the event
 when(.somethingHappened) { _ in
+    // do stuff
+}
+```
+
+#### Sending Notifications
+
+```swift
+// send your custom event
+trigger(.somethingHappened)
+
+// send your custom event with extra info
+trigger(.somethingHappened, userInfo: ["goodTimes": true])
+```
+
+#### Observe Specific Senders 
+
+```swift
+// trigger an event on a specific sender
+trigger(.updatedFromRemote, on: self)
+
+// observe the event on a specific sender
+when(model, does: .updatedFromRemote) { _ in
+    // do stuff
+}
+```
+
+#### Respond On A Specific Queue
+
+```swift
+// make sure the closure is run on the main queue
+when(.somethingHappened, doOn: OperationQueue.main) _ in 
     // do stuff
 }
 ```
