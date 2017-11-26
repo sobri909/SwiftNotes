@@ -10,7 +10,7 @@ pod 'SwiftNotes'
 
 Or just drop [SwiftNotes.swift](https://github.com/sobri909/SwiftNotes/blob/master/SwiftNotes/SwiftNotes.swift) into your project. 
 
-## Examples
+## UIKit Notification Examples
 
 #### UIKeyboard Notifications
 
@@ -28,21 +28,28 @@ when(.UIApplicationDidBecomeActive) { _ in
 }
 ```
 
-#### Custom Notifications
+## Custom Notifications
+
+#### Define A Custom Notification
 
 ```swift
 // define the custom event name
 extension NSNotification.Name {
     static let somethingHappened = Notification.Name("somethingHappened")
 }
+```
 
-// respond to the event
+#### Respond To A Custom Notification
+
+```swift
 when(.somethingHappened) { _ in
     // do stuff
 }
 ```
 
-#### Sending Notifications
+## Extra Parameters
+
+#### Trigger A Custom Notification
 
 ```swift
 // send your custom event
