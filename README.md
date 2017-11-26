@@ -2,6 +2,14 @@
 
 A super simple wrapper around [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter).
 
+## Setup
+
+```ruby
+pod 'SwiftNotes'
+```
+
+Or just drop [SwiftNotes.swift](https://github.com/sobri909/SwiftNotes/blob/master/SwiftNotes/SwiftNotes.swift) into your project. 
+
 ## Examples
 
 #### UIApplication Notifications
