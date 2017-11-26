@@ -1,6 +1,6 @@
 # SwiftNotes
 
-A super simple wrapper around NotificationCenter.
+A super simple wrapper around [NotificationCenter](https://developer.apple.com/documentation/foundation/nsnotificationcenter).
 
 ## Examples
 
@@ -29,7 +29,7 @@ extension NSNotification.Name {
 }
 
 // send the event
-NotificationCenter.default.post(Notification(name: .somethingHappened, object: nil, userInfo: nil))
+NotificationCenter.default.post(Notification(name: .somethingHappened))
 
 // respond to the event
 when(.somethingHappened) { _ in
