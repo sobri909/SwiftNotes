@@ -12,19 +12,19 @@ Or just drop [SwiftNotes.swift](https://github.com/sobri909/SwiftNotes/blob/mast
 
 ## Examples
 
-#### UIApplication Notifications
-
-```swift
-when(.UIApplicationDidBecomeActive) { _ in
-    // do stuff
-}
-```
-
 #### UIKeyboard Notifications
 
 ```swift
 when(.UIKeyboardDidShow) { note in
     // do stuff 
+}
+```
+
+#### UIApplication Notifications
+
+```swift
+when(.UIApplicationDidBecomeActive) { _ in
+    // do stuff
 }
 ```
 
