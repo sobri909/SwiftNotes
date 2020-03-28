@@ -10,6 +10,6 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .target(name: "SwiftNotes", dependencies: [])
+        .target(name: "SwiftNotes", path: "SwiftNotes", dependencies: [])
     ]
 )
