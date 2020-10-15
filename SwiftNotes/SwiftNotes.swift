@@ -17,6 +17,18 @@ import Foundation
     }
 }
 
+@discardableResult public func when(_ events: [Notification.Name],
+                                    do closure: @escaping (Notification) -> Swift.Void) -> [NSObjectProtocol] {
+    var protos: [NSObjectProtocol] = []
+    for event in events {
+        let proto = NotificationCenter.default.addObserver(forName: event, object: nil, queue: nil) { note in
+            closure(note)
+        }
+        protos.append(proto)
+    }
+    return protos
+}
+
 // run the closure on an explicit queue
 @discardableResult public func when(_ event: Notification.Name, doOn queue: OperationQueue,
                                     do closure: @escaping (Notification) -> Swift.Void) -> NSObjectProtocol {
