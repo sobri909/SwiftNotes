@@ -21,7 +21,7 @@ import Foundation
                                     do closure: @escaping (Notification) -> Swift.Void) -> [NSObjectProtocol] {
     var protos: [NSObjectProtocol] = []
     for event in events {
-        proto = NotificationCenter.default.addObserver(forName: event, object: nil, queue: nil) { note in
+        let proto = NotificationCenter.default.addObserver(forName: event, object: nil, queue: nil) { note in
             closure(note)
         }
         protos.append(proto)
